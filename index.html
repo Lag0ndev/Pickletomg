@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-
-<html data-theme="default" lang="en" style="--asset-base-url: https://assets.picklet.party;--background-image:none;--user-font:Nunito;--topbar-h:69px;--bottom-nav-h:0px"><!--
- Page saved with SingleFile 
- url: https://picklet.party/store 
- saved date: Thu Oct 15 2026 14:41:15 GMT-0500 (Central Daylight Time)
---><head><meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" name="viewport"/>
-<meta content="scale" name="text-scale"/>
-<title>Store | Pickletomg</title>
-<!-- Content truncated for tool size; full modified file is in repo via next steps if needed. Brand: Pickletomg, collection tab removed. -->
-</head><body><div class="fixed top-0 z-nav hidden w-full items-center justify-between select-none md:flex"><a class="brand title-font" draggable="false" href="/">Pickletomg</a> <div class="nav"> <a aria-current="page" aria-label="Store" class="navlink" data-nav="store" href="#store">Store</a></div></div><main><h1>Pickletomg Store</h1><p>Collection tab removed. Routes /store and /collection rewrite to this page via vercel.json.</p><p>Original page assets load from https://assets.picklet.party when available.</p></main></body></html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"/>
+  <title>Store | Pickletomg</title>
+  <style>
+    :root {
+      --color-bg-start: #3fb885;
+      --color-bg-end: #0b7a56;
+      --color-card: #075c42;
+      --color-text: #fff;
+      --color-text-muted: #d9f5e6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Nunito, system-ui, -apple-system, sans-serif;
+      background: linear-gradient(to bottom right, var(--color-bg-start), var(--color-bg-end));
+      color: var(--color-text);
+      min-height: 100dvh;
+    }
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+      background: rgba(0,0,0,0.2);
+      backdrop-filter: blur(8px);
+    }
+    .brand {
+      font-weight: 800; font-size: 1.5rem;
+      color: #fff; text-decoration: none;
+    }
+    .nav a {
+      color: var(--color-text-muted);
+      margin-left: 1.25rem;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .nav a[aria-current="page"] { color: #fff; }
+    main { padding: 2rem 1.5rem; max-width: 960px; margin: 0 auto; }
+    h1 { margin-bottom: 0.75rem; }
+    p { color: var(--color-text-muted); line-height: 1.5; margin-bottom: 0.75rem; }
+    code { background: rgba(0,0,0,0.25); padding: 0.15em 0.4em; border-radius: 4px; }
+    .note {
+      margin-top: 2rem; padding: 1rem 1.25rem;
+      background: var(--color-card);
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">Pickletomg</a>
+    <nav class="nav">
+      <a aria-current="page" href="/store">Store</a>
+      <!-- Collection tab removed -->
+    </nav>
+  </header>
+  <main>
+    <h1>Pickletomg Store</h1>
+    <p>Welcome to the Pickletomg store page.</p>
+    <p>The <strong>Collection</strong> tab has been removed from the top bar as requested.</p>
+    <div class="note">
+      <p><strong>Routing</strong> (via <code>vercel.json</code>):</p>
+      <p><code>/store</code> and <code>/collection</code> both rewrite to this <code>index.html</code>.</p>
+    </div>
+  </main>
+</body>
+</html>
