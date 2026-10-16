@@ -1,2 +1,0 @@
-# Pickletomg
-Pickletomg store page
